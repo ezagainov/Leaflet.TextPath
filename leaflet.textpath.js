@@ -37,10 +37,12 @@ var PolylineTextPath = {
     },
 
     _textRedraw: function () {
-        var text = this._text,
-            options = this._textOptions;
-        if (text) {
-            this.setText(null).setText(text, options);
+        if ("string" === typeof(this._text)) {
+            var text = this._text,
+                options = this._textOptions;
+            if (text) {
+                this.setText(null).setText(text, options);
+            }
         }
     },
 
